@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^veille.php$ php/veille.php
+RewriteRule ^signin.php$ php/signin.php
+RewriteRule ^contact.php$ php/contact.php
+RewriteRule ^connexion.php$ php/connexion.php
+RewriteRule ^ajout.php$ php/ajout.php

@@ -1,0 +1,229 @@
+/*----------------------------------*\
+         Header + Navigation
+\*----------------------------------*/
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  height: 75px;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+.menu {
+  margin-top: 30px;
+  float: right;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size:0.9em;
+  color: #fff;
+  position: relative;
+  transition: .3s;
+  font-weight: bold;
+}
+
+nav img{
+  height: 25px;
+  width: 25px;
+}
+
+nav a:hover {
+  background-color: rgba(48,48,48);
+  padding-top: 35px;
+  padding-bottom: 26px;
+}
+
+.menu .header-logo-nav {
+  display: none;
+}
+
+.header__logo {
+  line-height: 55px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  font-size: 30px;
+  float: left;
+}
+
+.header__logo img{
+  height: 75px;
+  width: 75px;
+}
+
+.websitename {
+  margin: auto;
+  padding-top: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size:0.9em;
+  color: #fff;
+  transition: .3s;
+  font-weight: bold;
+  position: relative;
+  margin-left: 10px;
+  float: left;
+}
+
+/*------------------------------------*\
+       Navigation Breakpoint -750px
+\*------------------------------------*/
+
+@media only screen and (max-width: 750px) {
+  body {
+    margin-top: 0;
+  }
+
+  .site-container, .site-pusher {
+    height: 100%;
+  }
+
+  .site-container {
+    overflow: hidden;
+  }
+
+  .site-pusher {
+    transition-duration: 0.3s;
+    transform: translateX(0px);
+  }
+
+  .site-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    background-image: url("../images/test.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header {
+    position: static;
+  }
+
+  .header__icon {
+    position: relative;
+    display: block;
+    float: right;
+    width: 75px;
+    height: 75px;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .header__icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #FFF;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .header__icon span::before, .header__icon span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #FFF;
+    transform: translateY(-6px);
+    transition: transform 0.5s;
+  }
+
+  .header__icon span::after {
+    transform: translateY(6px);
+  }
+
+  .header__icon:hover span::before {
+    transform: translateY(-8px);
+  }
+
+  .header__icon:hover span::after {
+    transform: translateY(8px);
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    top: 75px;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 200px;
+    transition-duration: 0.3s;
+  }
+
+  .menu a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.1em;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0);
+  }
+
+  nav a:before {
+    display: none;
+  }
+
+  nav a:hover {
+      background-color: none;
+      padding-top: 0;
+      padding-bottom: 0;
+  }
+
+  .menu {
+    margin-top: 0;
+  }
+
+  .with--sidebar .site-pusher {
+    transform: translateX(-800px);
+  }
+}
+
+/*------------------------------------*\
+       $animation menu Humburger
+\*------------------------------------*/
+
+.menu-icon-cross {
+  transition: transform 0.5s;
+}
+
+.menu-icon-cross span::before, .menu-icon-cross span::after {
+  transform-origin: 50% 50%;
+}
+
+.menu-icon-cross span {
+  transition: background 0.5s, transform 0.5s;
+}
+
+.menu-icon-cross.is-opened span {
+  background: transparent;
+}
+
+.menu-icon-cross.is-opened span::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.menu-icon-cross.is-opened span::after {
+  transform: translateY(0) rotate(-45deg);
+}
