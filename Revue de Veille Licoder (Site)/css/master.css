@@ -1,0 +1,275 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 75px;
+  font-family: 'Merriweather', serif;
+  background-image: url("../images/test.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*----------------------------------*\
+         Page "index.php"
+\*----------------------------------*/
+
+.slogan{
+  text-align: center;
+  margin-top: 110px;
+  color: white;
+}
+
+.slog:before{
+  content: 'Technologique';
+  animation: animate infinite 8s;
+}
+
+@keyframes animate{
+  0%
+  {
+    content: 'Technologique' ;
+  }
+  40%
+  {
+    content: 'Numérique' ;
+  }
+  80%
+  {
+    content: 'Scientifique' ;
+  }
+
+}
+
+.lastarticle{
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+  border: 2px solid rgba(0,0,0);
+  height: 250px;
+  background-image: url("../images/testarticle.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.lastarticle:hover{
+  opacity: 0.8;
+}
+
+.lastarticle h1{
+  background-color: rgba(0,0,0,0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0;
+  color: white;
+}
+
+.derniereveille{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.center{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+/*.otherveille a{
+  font-size: 1.3em;
+     width: 225px;
+     height: 43px;
+     padding-top: 7PX; /*permet le centrage vertical*/
+  /*   text-align: center;
+     color: white;
+     background-color: rgba(0,0,0,0.8);
+     border-radius: 10px;
+    border: 0.25px solid white;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.otherveille a:hover{
+     color: white;
+     background: #403E3E;
+     border: 0.5px solid black;
+}
+
+.otherveille{
+  width: 225px;
+  text-align: center;
+  padding-top: 20px;
+  position: absolute;
+
+}*/
+
+/*----------------------------------*\
+         Page "Veille.php"
+\*----------------------------------*/
+
+.container{
+  width: 100%;
+  padding: 0;
+}
+
+.cat{
+  position: fixed;
+  top:75px;
+  bottom:60px;
+  right: 0px;
+  background: white;
+  float:right;
+  padding: 0 1% 0 0;
+  width:20%;
+}
+
+.classement{
+  margin-top: 5%;
+  width: 100%;
+  height: 50px;
+}
+
+.classement p{
+  margin: auto;
+  font-size: 0.9em;
+  padding-left: 5px;
+  padding-right: 15px;
+  padding-top: 7px;
+  float: right;
+}
+
+.classement select{
+  margin: auto;
+  float: right;
+}
+
+.cat-text{
+  margin: 5% 0 10% 5%;
+  font-size: 1.3em;
+}
+
+.art{
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  display: inline-block;
+  width: 25%;
+  margin: 0 2% 2% 0%;
+  padding: 0 2% 2% 2%;
+  text-align: justify;
+}
+
+.all-art{
+  width: 80%;
+  margin:50px 0 70px 2%;
+}
+
+h3{
+  margin-top: 10%;
+  width: 50%;
+}
+
+.img-art{
+  height: 85px;
+  width: 60%;
+  float:right;
+  margin: 8% 2% 0 0;
+}
+
+.art-text{
+  margin-top: 25%;
+}
+
+.haut-page {
+  position: relative;
+  bottom:0px;
+  right:0px;
+  font-size: 1em;
+}
+
+#page_veille{ /*H1*/
+  background-color: rgba(255,255,255,0.8);
+  margin-top: 100px;
+  width: 25%;
+  text-align: center;
+  margin-left: 27%;
+}
+
+/*----------------------------------*\
+          Page "ajout.php"
+\*----------------------------------*/
+
+.fond_ajout{
+  background: white;
+  opacity: 0.9;
+  margin: 100px 25% 5% 25%;
+  padding: 1% 3%;
+}
+
+.fond_ajout .btn{
+  margin: 20px 0 10px 0;
+}
+
+.fond_ajout .ajout-text{
+  margin: 5% 15% 0 25%;
+}
+.fond_ajout .bouton{
+  margin-top: 0;
+}
+.fond_ajout .form-group{
+  font-size: 1.3em;
+}
+
+/*----------------------------------*\
+           Page "Contact"
+\*----------------------------------*/
+
+.fond_contact{
+  background: white;
+  opacity: 0.9;
+  margin: 100px 25% 5% 25%;
+  padding: 1% 3%;
+}
+
+.fond_contact .btn{
+  margin: 20px 0 10px 0;
+}
+
+/*----------------------------------*\
+          Page "Connexion"
+\*----------------------------------*/
+
+.fond_connection{
+  background: white;
+  opacity: 0.9;
+  margin: 100px 35% 5% 35%;
+  padding: 1% 3%;
+}
+.fond_connection .btn{
+  margin: 20px 0 10px 0;
+}
+.fond_connection .chp{
+  width:100%;
+}
+
+/*----------------------------------*\
+          Page "Inscription"
+\*----------------------------------*/
+
+.fond_inscription{
+  background: white;
+  opacity: 0.9;
+  margin: 100px 20% 5% 25%;
+  padding: 1% 3%;
+}
+.fond_inscription .btn{
+  margin: 20px 0 10px 0;
+}
+.fond_inscription .cgu{
+  font-size: 0.8em;
+
+}
